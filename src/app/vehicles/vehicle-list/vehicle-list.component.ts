@@ -1,6 +1,7 @@
 import { Vehicle } from './../shared/models/vehicle.model';
 import { VehiclesService } from './../shared/services/vehicles.service';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'cypress/types/bluebird';
 
 @Component({
   selector: 'app-vehicle-list',
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleListComponent implements OnInit {
   public vehicleList: Vehicle[] = [];
+  public brandCount: any = {};
 
   constructor(private vehicleService: VehiclesService) {}
 
@@ -20,6 +22,18 @@ export class VehicleListComponent implements OnInit {
     this.vehicleService.getAllVehicles().subscribe((vehicleList: Vehicle[]) => {
       this.vehicleList = vehicleList;
       console.log(this.vehicleList);
+      this.getBrandCount(vehicleList);
     });
+  }
+
+  public getBrandCount(vehicles: Vehicle[]) {
+    for (let vehicle of vehicles) {
+      if (!this.brandCount.hasOwnProperty(vehicle.marca)) {
+        this.brandCount[vehicle.marca] = 1;
+      } else {
+        this.brandCount[vehicle.marca] += 1;
+      }
+    }
+    console.log(this.brandCount);
   }
 }

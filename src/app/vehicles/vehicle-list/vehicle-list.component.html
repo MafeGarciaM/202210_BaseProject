@@ -20,3 +20,10 @@
     </tbody>
   </table>
 </div>
+<div class="w-75 p-3 d-flex align-items-start">
+  <div style="list-style: none">
+    <div class="pl-0" *ngFor="let brand of brandCount | keyvalue">
+      Total de {{ brand.key }}: {{ brand.value }}
+    </div>
+  </div>
+</div>
