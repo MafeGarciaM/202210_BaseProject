@@ -1,0 +1,22 @@
+<div class="w-75 p-3 d-flex align-items-start">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Linea</th>
+        <th scope="col">Modelo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let vehicle of vehicleList; index as i">
+        <tr>
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ vehicle.marca }}</td>
+          <td>{{ vehicle.linea }}</td>
+          <td>{{ vehicle.modelo }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
