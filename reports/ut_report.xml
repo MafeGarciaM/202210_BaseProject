@@ -1,7 +1,20 @@
 <testExecutions version="1">
+  <file path="src/app/vehicles/vehicle-list/vehicle-list.component.spec.ts">
+    <testCase name="VehicleListComponent should create a table with rows" duration="31"/>
+    <testCase name="VehicleListComponent should create a table with header" duration="15"/>
+    <testCase name="VehicleListComponent should create" duration="24"/>
+  </file>
+  <file path="src/app/vehicles/shared/models/vehicle.model.spec.ts">
+    <testCase name="Vehicle should create an instance" duration="1"/>
+  </file>
+  <file path="src/app/header/header.component.spec.ts">
+    <testCase name="HeaderComponent should create" duration="12"/>
+  </file>
+  <file path="src/app/footer/footer.component.spec.ts">
+    <testCase name="FooterComponent should create" duration="7"/>
+  </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="118"/>
-    <testCase name="AppComponent should create the app" duration="14"/>
-    <testCase name="AppComponent should render title" duration="13"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="28"/>
+    <testCase name="AppComponent should create the app" duration="8"/>
   </file>
 </testExecutions>
